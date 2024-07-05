@@ -13,6 +13,7 @@ module.exports = {
         header_1: "url('./assets/header.png')",
         header_2: "url('./assets/aboutus.png')",
         header_3: "url('./assets/application.png')",
+        header_4: "url('./assets/parking.png')",
       },
     },
   },
