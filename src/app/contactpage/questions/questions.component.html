@@ -1,8 +1,8 @@
-<div class="flex flex-col gap-6">
+<div class="flex flex-col justify-center items-center gap-6 w-screen mb-24">
   <h3 class="text-6xl font-bold">
     Have a <span class="text-primary">Question?</span>
   </h3>
-  <div class="flex gap-6 items-center">
+  <div class="flex gap-6 items-center w-4/5">
     <div class="flex flex-col gap-5">
       <div class="flex gap-3">
         <svg
@@ -46,23 +46,6 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M24 11.9998V19.4998C24 20.6932 24.4741 21.8379 25.318 22.6818C26.1619 23.5257 27.3066 23.9998 28.5 23.9998C29.6935 23.9998 30.838 23.5257 31.6819 22.6818C32.5258 21.8379 33 20.6932 33 19.4998V17.9998C32.9998 14.6143 31.8543 11.3285 29.7499 8.6766C27.6454 6.02467 24.7059 4.16263 21.4089 3.39325C18.112 2.62386 14.6519 2.99236 11.591 4.43884C8.53015 5.88534 6.04861 8.32473 4.5499 11.3604C3.05119 14.396 2.62346 17.8494 3.33626 21.159C4.04906 24.4686 5.86048 27.4396 8.47595 29.5891C11.0914 31.7388 14.3572 32.9403 17.7421 32.9985C21.127 33.0567 24.4321 31.9681 27.12 29.9098M24 17.9998C24 21.3135 21.3138 23.9998 18 23.9998C14.6863 23.9998 12 21.3135 12 17.9998C12 14.6861 14.6863 11.9998 18 11.9998C21.3138 11.9998 24 14.6861 24 17.9998Z"
-            stroke="#FBBA14"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <p>LinkedIn</p>
-      </div>
-      <div class="flex gap-3">
-        <svg
-          class="size-6"
-          viewBox="0 0 36 36"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
             d="M18 31.5C23.25 26.1 28.5 21.2646 28.5 15.3C28.5 9.33532 23.799 4.5 18 4.5C12.201 4.5 7.5 9.33532 7.5 15.3C7.5 21.2646 12.75 26.1 18 31.5Z"
             stroke="#FBBA14"
             stroke-width="4"
@@ -91,32 +74,60 @@
       ></iframe>
     </div>
     <form
-      class="flex flex-col items-center p-3 rounded-xl gap-2 w-3/5 h-96 shadow-lg"
+      class="flex flex-col items-center justify-center p-3 rounded-xl gap-5 w-3/5 h-[450px] shadow-lg"
     >
-      <div class="flex gap- w-full">
-        <div class="flex flex-col w-full">
-          <label>FirstName*</label>
-          <input type="text" class="border-2 rounded w-full" />
-        </div>
-        <div class="flex flex-col w-full">
-          <label>LastName</label>
-          <input type="text" class="border-2 rounded w-full" />
-        </div>
-      </div>
+      <input
+        type="text"
+        placeholder="FirstName*"
+        class="border-b-2 border-primary w-full"
+      />
+      <input
+        type="text"
+        placeholder="LastName*"
+        class="border-b-2 border-primary w-full"
+      />
 
-      <div class="flex flex-col w-full">
-        <label>Email*</label>
-        <input type="email" class="border-2 rounded" />
-      </div>
-      <div class="flex flex-col w-full">
-        <label>Message*</label>
-        <textarea rows="4" class="border-2 rounded"></textarea>
-      </div>
+      <input
+        type="email"
+        placeholder="Mail*"
+        class="border-b-2 border-primary w-full"
+      />
+      <textarea
+        rows="4"
+        class="border-b-2 border-primary w-full"
+        placeholder="Message*"
+      ></textarea>
       <button
-        class="border-2 bg-primary border-primary transition-colors duration-200 ease-out hover:text-primary hover:bg-white font-semibold rounded-md px-3 py-1 text-white"
+        class="border-2 bg-primary border-primary transition-colors duration-200 ease-out hover:text-primary hover:bg-white font-semibold px-5 text-white"
       >
         Send
       </button>
     </form>
   </div>
+  <svg
+    class="right-0 absolute"
+    width="312"
+    height="466"
+    viewBox="0 0 468 700"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clip-path="url(#clip0_461_351)">
+      <path
+        d="M696.586 628.725L364.186 53.0011C361.245 47.901 355.803 44.7654 349.921 44.7654C344.039 44.7654 338.596 47.9029 335.655 53.0011L2.20722 630.524C-0.735741 635.624 -0.735741 641.901 2.20722 647.001C5.14828 652.101 10.5898 655.237 16.4738 655.237H683.361C683.415 655.237 683.47 655.237 683.525 655.237C692.623 655.237 700 647.869 700 638.76C700 634.979 698.724 631.508 696.586 628.725ZM45.0108 622.288L349.921 94.1854L654.83 622.288H45.0108Z"
+        fill="#FBBA14"
+        fill-opacity="0.2"
+      />
+      <path
+        d="M288.75 311.5H377.222C397.334 311.5 416.623 319.49 430.844 333.711C445.066 347.933 453.056 367.221 453.056 387.334C453.056 407.446 445.066 426.734 430.844 440.956C416.623 455.177 397.334 463.167 377.222 463.167H314.028V539H288.75V311.5ZM314.028 336.778V437.889H377.222C390.63 437.889 403.489 432.563 412.97 423.082C422.451 413.601 427.778 400.742 427.778 387.334C427.778 373.925 422.451 361.066 412.97 351.585C403.489 342.104 390.63 336.778 377.222 336.778H314.028Z"
+        fill="#1E1E1E"
+        fill-opacity="0.2"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_461_351">
+        <rect width="700" height="700" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
 </div>

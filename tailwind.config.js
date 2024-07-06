@@ -6,8 +6,6 @@ module.exports = {
       colors: {
         primary: "#ffae00",
         secondary: "#f6f6f6",
-        majorblack: "#000000",
-        majorwhite: "#ffffff",
       },
       backgroundImage: {
         header_1: "url('./assets/header.png')",

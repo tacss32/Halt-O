@@ -1,19 +1,19 @@
 <div
-  class="flex items-center fixed justify-between py-2 px-4 z-10 translate-x-[-50%] shadow-md transition-colors duration-300 rounded-full mt-4 w-4/5"
+  class="flex items-center fixed justify-between py-2 px-4 z-20 duration-500 ease-in-out transition-colors translate-x-[-50%] shadow-xl rounded-full mt-4 w-4/5"
   [ngClass]="{
-    'bg-majorblack bg-opacity-45 text-majorwhite': isScroll(),
-    'bg-secondary text-majorblack': !isScroll()
+    'bg-black bg-opacity-45 text-white': isScroll(),
+    'bg-white text-black': !isScroll()
   }"
 >
   <a href="/" class="flex items-center gap-2">
     <img src="../../assets/logo.png" alt="halt-o logo" class="size-10" />
     <h2 class="text-2xl font-bold text-primary">HALT-O</h2>
   </a>
-  <ul class="gap-8 font-medium hidden sm:flex">
+  <ul class="gap-8 font-medium flex">
     <li>
       <a
         href="/"
-        class="hover:text-primary transition-colors duration-100"
+        class="hover:text-primary"
         [ngClass]="{
           'text-primary': isActive('/')
         }"
@@ -23,7 +23,7 @@
     <li>
       <a
         href="/about"
-        class="hover:text-primary transition-colors duration-00"
+        class="hover:text-primary"
         [ngClass]="{ 'text-primary': isActive('/about') }"
         >About</a
       >
@@ -31,7 +31,7 @@
     <li>
       <a
         href="/application"
-        class="hover:text-primary transition-colors duration-100"
+        class="hover:text-primary"
         [ngClass]="{ 'text-primary': isActive('/application') }"
         >Application</a
       >
@@ -39,7 +39,7 @@
     <li>
       <a
         href="/parking"
-        class="hover:text-primary transition-colors duration-100"
+        class="hover:text-primary"
         [ngClass]="{
           'text-primary': isActive('/parking')
         }"
@@ -66,69 +66,4 @@
       </svg>
     </button>
   </a>
-  <!-- <div class="sm:hidden ml-auto" (click)="toggleMenu()">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-menu-2 size-8"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="#ffae00"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M4 6l16 0" />
-      <path d="M4 12l16 0" />
-      <path d="M4 18l16 0" />
-    </svg>
-  </div> -->
-  <!-- @if(menuOpen()){
-  <ul class="flex-col transition-all duration-200 ease-in sm:hidden">
-    <li class="border-b-2 flex justify-center">
-      <a
-        href="/"
-        class="hover:text-primary"
-        [ngClass]="{
-          'text-primary': isActive('/')
-        }"
-        >Home</a
-      >
-    </li>
-    <li class="border-b-2 flex justify-center">
-      <a
-        href="/about"
-        class="hover:text-primary transition-colors duration-100"
-        [ngClass]="{ 'text-primary': isActive('/about') }"
-        >About</a
-      >
-    </li>
-    <li class="border-b-2 flex justify-center">
-      <a
-        href="/application"
-        class="hover:text-primary transition-colors duration-100"
-        [ngClass]="{ 'text-primary': isActive('/application') }"
-        >Application</a
-      >
-    </li>
-    <li class="border-b-2 flex justify-center">
-      <a
-        href="/parking"
-        class="hover:text-primary transition-colors duration-100"
-        [ngClass]="{
-          'text-primary': isActive('/parking')
-        }"
-        >ParkingEcosystem</a
-      >
-    </li>
-    <li class="flex justify-center">
-      <a
-        href="/contact"
-        class="hover:text-primary transition-colors duration-150"
-        [ngClass]="{ 'text-primary': isActive('/contact') }"
-        >Contact</a
-      >
-    </li>
-  </ul>
-  } -->
 </div>
