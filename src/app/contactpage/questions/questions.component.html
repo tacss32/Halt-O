@@ -1,8 +1,10 @@
-<div class="flex flex-col justify-center items-center gap-6 w-screen mb-24">
-  <h3 class="text-6xl text-center font-bold">
+<div
+  class="flex flex-col justify-center items-center gap-6 w-screen mb-10 sm:mb-24"
+>
+  <h3 class="text-2xl sm:text-6xl text-center font-bold">
     Have a <span class="text-primary">Question?</span>
   </h3>
-  <div class="flex flex-col sm:flex-row gap-6 items-center w-4/5">
+  <div class="flex flex-col sm:flex-row gap-6 items-center w-full sm:w-4/5 p-3">
     <div class="flex flex-col gap-5">
       <div class="flex gap-3">
         <svg
@@ -74,27 +76,27 @@
       ></iframe>
     </div>
     <form
-      class="flex flex-col items-center justify-center p-3 rounded-xl gap-5 w-full sm:w-3/5 h-[450px] shadow-lg"
+      class="flex flex-col items-center justify-center p-3 rounded-xl gap-5 w-full sm:w-3/5 h-[350px] sm:h-[450px] shadow-lg"
     >
       <input
         type="text"
         placeholder="FirstName*"
-        class="border-b-2 border-primary w-full"
+        class="border-b-2 p-1 border-primary w-full focus:outline-none"
       />
       <input
         type="text"
         placeholder="LastName*"
-        class="border-b-2 border-primary w-full"
+        class="border-b-2 p-1 border-primary w-full focus:outline-none"
       />
 
       <input
         type="email"
         placeholder="Mail*"
-        class="border-b-2 border-primary w-full"
+        class="border-b-2 p-1 border-primary w-full focus:outline-none"
       />
       <textarea
         rows="4"
-        class="border-b-2 border-primary w-full"
+        class="border-b-2 border-primary w-full focus:outline-none"
         placeholder="Message*"
       ></textarea>
       <button

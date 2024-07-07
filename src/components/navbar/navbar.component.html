@@ -1,5 +1,5 @@
 <div
-  class="flex flex-col fixed mt-4 h-fit m-3 w-full sm:w-4/5 z-20 duration-500 ease-in-out transition-colors translate-x-[-50%]"
+  class="flex flex-col fixed mt-4 h-fit w-11/12 sm:w-4/5 z-20 duration-500 ease-in-out transition-colors translate-x-[-50%]"
 >
   <div
     class="flex items-center justify-between rounded-full px-4 py-2 shadow-xl"
@@ -23,7 +23,7 @@
       class="icon icon-tabler icon-tabler-layout-navbar-expand size-5 sm:size-12 flex sm:hidden"
       viewBox="0 0 24 24"
       stroke-width="1.5"
-      stroke="#000000"
+      [attr.stroke]="isScroll() ? '#fff' : '#000000'"
       fill="none"
       stroke-linecap="round"
       stroke-linejoin="round"

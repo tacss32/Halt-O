@@ -3,7 +3,7 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { EcosystemComponent } from './ecosystem/ecosystem.component';
 import { FooterComponent } from '../../components/footer/footer.component';
-import { TrucksComponent } from './trucks/trucks.component';
+import { RecycleComponent } from './recycle/recycle.component';
 
 @Component({
   selector: 'app-parkingpage',
@@ -14,7 +14,7 @@ import { TrucksComponent } from './trucks/trucks.component';
     HeaderComponent,
     EcosystemComponent,
     FooterComponent,
-    TrucksComponent,
+    RecycleComponent,
   ],
 })
 export class ParkingpageComponent {}
