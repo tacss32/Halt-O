@@ -1,5 +1,5 @@
 <div
-  class="flex items-center fixed justify-between py-2 px-4 z-20 duration-500 ease-in-out transition-colors translate-x-[-50%] shadow-xl rounded-full mt-4 w-4/5"
+  class="flex items-center fixed justify-between py-2 px-4 z-20 duration-500 ease-in-out transition-colors translate-x-[-50%] shadow-xl rounded-full mt-4 h-fit w-4/5"
   [ngClass]="{
     'bg-black bg-opacity-60 text-white': isScroll(),
     'bg-white text-black': !isScroll()
@@ -9,46 +9,44 @@
     <img src="../../assets/logo.png" alt="halt-o logo" class="size-10" />
     <h2 class="text-2xl font-bold text-primary">HALT-O</h2>
   </a>
-  <ul class="gap-8 font-medium flex">
+
+  <svg
+    (click)="toggleMenu()"
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon icon-tabler icon-tabler-layout-navbar-expand size-12 flex sm:hidden"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="#000000"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path
+      d="M4 18v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+    />
+    <path d="M4 9h16" />
+    <path d="M10 14l2 2l2 -2" />
+  </svg>
+
+  <ul class="gap-8 font-medium hidden sm:flex">
+    @for(page of pages();track page.path){
     <li>
       <a
-        href="/"
+        [href]="page.path"
         class="hover:text-primary"
         [ngClass]="{
-          'text-primary': isActive('/')
+          'text-primary': isActive(page.path)
         }"
-        >Home</a
+        >{{ page.name }}</a
       >
     </li>
-    <li>
-      <a
-        href="/about"
-        class="hover:text-primary"
-        [ngClass]="{ 'text-primary': isActive('/about') }"
-        >About</a
-      >
-    </li>
-    <li>
-      <a
-        href="/application"
-        class="hover:text-primary"
-        [ngClass]="{ 'text-primary': isActive('/application') }"
-        >Application</a
-      >
-    </li>
-    <li>
-      <a
-        href="/parking"
-        class="hover:text-primary"
-        [ngClass]="{
-          'text-primary': isActive('/parking')
-        }"
-        >Parking-Ecosystem</a
-      >
-    </li>
+    }
   </ul>
   <a href="/contact">
-    <button class="flex bg-primary px-4 py-1 rounded-full text-white">
+    <button
+      class="flex bg-primary px-4 py-1 rounded-full text-white font-semibold"
+    >
       Contact us
       <svg
         class="size-6"
@@ -67,3 +65,21 @@
     </button>
   </a>
 </div>
+@if (menuOpen()) {
+<div class="flex flex-col sm:hidden">
+  <ul>
+    @for(page of pages();track page.path){
+    <li>
+      <a
+        [href]="page.path"
+        class="hover:text-primary"
+        [ngClass]="{
+          'text-primary': isActive(page.path)
+        }"
+        >{{ page.name }}</a
+      >
+    </li>
+    }
+  </ul>
+</div>
+}

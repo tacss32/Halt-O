@@ -2,6 +2,11 @@ import { Component, HostListener, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgClass } from '@angular/common';
 
+interface menu {
+  name: string;
+  path: string;
+}
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -11,6 +16,25 @@ import { NgClass } from '@angular/common';
 export class NavbarComponent {
   menuOpen = signal<boolean>(false);
   isScroll = signal<boolean>(true);
+
+  pages = signal<menu[]>([
+    {
+      name: 'Home',
+      path: '/',
+    },
+    {
+      name: 'About',
+      path: '/about',
+    },
+    {
+      name: 'Application',
+      path: '/application',
+    },
+    {
+      name: 'Parking-Ecosystem',
+      path: '/parking',
+    },
+  ]);
 
   private router = inject(Router);
 
