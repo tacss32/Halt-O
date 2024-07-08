@@ -34,6 +34,10 @@ export class NavbarComponent {
       name: 'Parking-Ecosystem',
       path: '/parking',
     },
+    {
+      name: 'Contact',
+      path: '/contact',
+    },
   ]);
 
   private router = inject(Router);

@@ -15,14 +15,9 @@ interface TeamMember {
 export class TeamComponent {
   members = signal<TeamMember[]>([
     {
-      photo: '../../../assets/team/kalai.png',
-      name: 'Kalai Raj',
-      role: 'HR & OPERATIONS',
-    },
-    {
-      photo: '../../../assets/team/jagadeesh.png',
-      name: 'Jagadeesh',
-      role: 'VENDOR MANAGEMENT',
+      photo: '../../../assets/team/aathav_cha.png',
+      name: 'Aathav Chander',
+      role: 'SALES',
     },
     {
       photo: '../../../assets/team/aravind_rj.png',
@@ -35,19 +30,24 @@ export class TeamComponent {
       role: 'TECHNOLOGY',
     },
     {
-      photo: '../../../assets/team/aathav_cha.png',
-      name: 'Aathav Chander',
-      role: 'SALES',
-    },
-    {
       photo: '../../../assets/team/bharath_vp.png',
       name: 'Bharath',
       role: 'PROCUREMENT',
     },
     {
-      photo: '../../../assets/team/kamaal.png',
-      name: 'Mohammed Kamaal',
-      role: 'LAND CONVERSION',
+      photo: '../../../assets/team/jagadeesh.png',
+      name: 'Jagadeesh',
+      role: 'VENDOR MANAGEMENT',
+    },
+    {
+      photo: '../../../assets/team/jaishankar.png',
+      name: 'Jai Shankar',
+      role: 'SUPPLY CHAIN MANAGEMENT',
+    },
+    {
+      photo: '../../../assets/team/kalai.png',
+      name: 'Kalai Raj',
+      role: 'HR & OPERATIONS',
     },
     {
       photo: '../../../assets/team/manikandan.png',
@@ -55,9 +55,9 @@ export class TeamComponent {
       role: 'LEGAL COMPLIANCE',
     },
     {
-      photo: '../../../assets/team/jaishankar.png',
-      name: 'Jai Shankar',
-      role: 'SUPPLY CHAIN MANAGEMENT',
+      photo: '../../../assets/team/kamaal.png',
+      name: 'Mohammed Kamaal',
+      role: 'LAND CONVERSION',
     },
   ]);
 }

@@ -20,7 +20,9 @@
     <svg
       (click)="toggleMenu()"
       xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-layout-navbar-expand size-5 sm:size-12 flex sm:hidden"
+      class="icon icon-tabler icon-tabler-menu-2 size-5 sm:size-12 flex sm:hidden"
+      width="44"
+      height="44"
       viewBox="0 0 24 24"
       stroke-width="1.5"
       [attr.stroke]="isScroll() ? '#fff' : '#000000'"
@@ -29,11 +31,9 @@
       stroke-linejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path
-        d="M4 18v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-      />
-      <path d="M4 9h16" />
-      <path d="M10 14l2 2l2 -2" />
+      <path d="M4 6l16 0" />
+      <path d="M4 12l16 0" />
+      <path d="M4 18l16 0" />
     </svg>
 
     <ul class="gap-8 font-medium hidden sm:flex">
@@ -50,11 +50,11 @@
       </li>
       }
     </ul>
-    <a href="/contact">
+    <a href="login" class="hidden sm:flex">
       <button
         class="flex bg-primary px-2 sm:px-4 sm:py-1 rounded-full text-white font-semibold items-center"
       >
-        Contact us
+        Login
         <svg
           class="size-4 sm:size-6"
           viewBox="0 0 24 24"
@@ -74,13 +74,13 @@
   </div>
   @if (menuOpen()) {
   <div
-    class="flex flex-col sm:hidden mt-3 rounded-md"
+    class="flex flex-col items-center sm:hidden mt-2 rounded-md"
     [ngClass]="{
       'bg-black bg-opacity-60 text-white': isScroll(),
       'bg-white text-black': !isScroll()
     }"
   >
-    <ul class="p-3 text-center">
+    <ul class="p-2 text-center w-full">
       @for(page of pages();track page.path){
       <a
         [href]="page.path"
@@ -95,6 +95,27 @@
       </a>
       }
     </ul>
+    <a href="login" class="flex sm:hidden mb-2">
+      <button
+        class="flex bg-primary px-2 sm:px-4 sm:py-1 rounded-full text-white font-semibold items-center"
+      >
+        Login
+        <svg
+          class="size-4 sm:size-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7 17L17 7M17 7H8M17 7V16"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </a>
   </div>
   }
 </div>
