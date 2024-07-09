@@ -1,10 +1,10 @@
 <div
-  class="flex flex-col fixed mt-4 h-fit w-11/12 sm:w-4/5 z-20 duration-500 ease-in-out transition-colors translate-x-[-50%]"
+  class="flex flex-col fixed sm:mt-4 h-fit w-full sm:w-4/5 z-20 duration-500 ease-in-out transition-colors translate-x-[-50%]"
 >
   <div
-    class="flex items-center justify-between rounded-full px-4 py-2 shadow-xl"
+    class="flex items-center justify-between rounded-none sm:rounded-full px-4 py-2 shadow-xl"
     [ngClass]="{
-      'bg-black bg-opacity-60 text-white': isScroll(),
+      'sm:bg-black sm:bg-opacity-60 sm:text-white': isScroll(),
       'bg-white text-black': !isScroll()
     }"
   >
@@ -25,7 +25,7 @@
       height="44"
       viewBox="0 0 24 24"
       stroke-width="1.5"
-      [attr.stroke]="isScroll() ? '#fff' : '#000000'"
+      stroke="#000000"
       fill="none"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -74,11 +74,7 @@
   </div>
   @if (menuOpen()) {
   <div
-    class="flex flex-col items-center sm:hidden mt-2 rounded-md"
-    [ngClass]="{
-      'bg-black bg-opacity-60 text-white': isScroll(),
-      'bg-white text-black': !isScroll()
-    }"
+    class="flex flex-col items-center sm:hidden mt-2 rounded-md shadow-md bg-white text-black"
   >
     <ul class="p-2 text-center w-full">
       @for(page of pages();track page.path){
