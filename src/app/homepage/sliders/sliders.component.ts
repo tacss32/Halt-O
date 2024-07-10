@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Carousel, initTWE } from 'tw-elements';
 
 @Component({
   selector: 'app-sliders',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './sliders.component.html',
 })
-export class SlidersComponent {}
+export class SlidersComponent {
+  ngOnInit() {
+    initTWE({ Carousel });
+  }
+}
