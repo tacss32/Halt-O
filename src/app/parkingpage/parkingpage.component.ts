@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { EcosystemComponent } from './ecosystem/ecosystem.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { RecycleComponent } from './recycle/recycle.component';
+import { BackComponent } from '../../components/back/back.component';
 
 @Component({
   selector: 'app-parkingpage',
@@ -15,6 +16,7 @@ import { RecycleComponent } from './recycle/recycle.component';
     EcosystemComponent,
     FooterComponent,
     RecycleComponent,
+    BackComponent,
   ],
 })
 export class ParkingpageComponent {}

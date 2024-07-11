@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { PassageComponent } from './passage/passage.component';
 import { FeaturesComponent } from './features/features.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { BackComponent } from '../../components/back/back.component';
 
 @Component({
   selector: 'app-applicationpage',
@@ -16,6 +17,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
     PassageComponent,
     FeaturesComponent,
     FooterComponent,
+    BackComponent,
   ],
 })
 export class ApplicationpageComponent {}

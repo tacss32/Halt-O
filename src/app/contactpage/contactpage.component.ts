@@ -3,6 +3,7 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { BackComponent } from '../../components/back/back.component';
 
 @Component({
   selector: 'app-contactpage',
@@ -13,6 +14,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
     HeaderComponent,
     QuestionsComponent,
     FooterComponent,
+    BackComponent,
   ],
 })
 export class ContactpageComponent {}

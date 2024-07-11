@@ -6,6 +6,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { MissionVissionComponent } from './mission-vission/mission-vission.component';
 import { TeamComponent } from './team/team.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { BackComponent } from '../../components/back/back.component';
 
 @Component({
   selector: 'app-aboutpage',
@@ -18,6 +19,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
     MissionVissionComponent,
     TeamComponent,
     FooterComponent,
+    BackComponent,
   ],
 })
 export class AboutpageComponent {}
