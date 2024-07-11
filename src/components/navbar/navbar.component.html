@@ -1,8 +1,9 @@
 <div
-  class="flex flex-col fixed sm:mt-4 h-fit w-full sm:w-4/5 z-20 duration-500 ease-in-out transition-colors translate-x-[-50%]"
+  class="flex flex-col fixed sm:mt-4 w-full sm:w-4/5 z-20 duration-500 ease-in-out transition-transform translate-x-[-50%]"
+  [ngClass]="{ 'translate-y-[-100%] sm:translate-y-[-150%]': !navbarVisible() }"
 >
   <div
-    class="flex items-center justify-between rounded-none sm:rounded-full px-4 py-2 shadow-xl"
+    class="flex items-center justify-between rounded-none sm:rounded-full px-4 py-3 sm:py-2 shadow-xl"
     [ngClass]="{
       'sm:bg-black sm:bg-opacity-60 sm:text-white': isScroll(),
       'bg-white text-black': !isScroll()
@@ -12,29 +13,10 @@
       <img
         src="../../assets/logo.png"
         alt="halt-o logo"
-        class="size-6 sm:size-10"
+        class="size-7 sm:size-10"
       />
-      <h2 class="text-base sm:text-2xl font-bold text-primary">HALT-O</h2>
+      <h2 class="text-xl sm:text-2xl font-bold text-primary">HALT-O</h2>
     </a>
-
-    <svg
-      (click)="toggleMenu()"
-      xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-menu-2 size-5 sm:size-12 flex sm:hidden"
-      width="44"
-      height="44"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="#000000"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M4 6l16 0" />
-      <path d="M4 12l16 0" />
-      <path d="M4 18l16 0" />
-    </svg>
 
     <ul class="gap-8 font-medium hidden sm:flex">
       @for(page of pages();track page.path){
@@ -50,33 +32,56 @@
       </li>
       }
     </ul>
-    <a href="login" class="hidden sm:flex">
-      <button
-        class="flex bg-primary px-2 sm:px-4 sm:py-1 rounded-full text-white font-semibold items-center"
-      >
-        Login
-        <svg
-          class="size-4 sm:size-6"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+    <div class="flex gap-3">
+      <a href="https://www.halt-o.com/" target="_blank">
+        <button
+          class="flex bg-primary px-2 sm:px-4 sm:py-1 rounded-full text-white font-semibold items-center"
         >
-          <path
-            d="M7 17L17 7M17 7H8M17 7V16"
-            stroke="#fff"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
-    </a>
+          Login
+          <svg
+            class="size-4 sm:size-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 17L17 7M17 7H8M17 7V16"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </a>
+      <svg
+        (click)="toggleMenu()"
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-menu-2 size-6 sm:size-12 flex sm:hidden"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#000000"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M4 6l16 0" />
+        <path d="M4 12l16 0" />
+        <path d="M4 18l16 0" />
+      </svg>
+    </div>
   </div>
   <div
-    class="flex flex-col items-center sm:hidden mt-2 rounded-md shadow-md bg-white text-black menu-container"
+    class="flex flex-col relative items-center sm:hidden mt-2 rounded-md shadow-md bg-white text-black menu-container"
     [ngClass]="{ open: menuOpen() }"
   >
-    <ul class="p-2 text-center w-full">
+    <img
+      src="../../assets/shadow.png"
+      alt="care shadow"
+      class="absolute opacity-10 w-2/3 right-0 bottom-0"
+    />
+    <ul class="p-2 text-center w-full z-20">
       @for(page of pages();track page.path){
       <a
         [href]="page.path"
@@ -85,33 +90,12 @@
           'text-primary': isActive(page.path)
         }"
       >
-        <li class="border-b-2 p-1">
+        <li class="p-1 border-b-2">
           {{ page.name }}
         </li>
       </a>
       }
     </ul>
-    <a href="login" class="flex sm:hidden mb-2">
-      <button
-        class="flex bg-primary px-2 sm:px-4 sm:py-1 rounded-full text-white font-semibold items-center"
-      >
-        Login
-        <svg
-          class="size-4 sm:size-6"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M7 17L17 7M17 7H8M17 7V16"
-            stroke="#fff"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
-    </a>
   </div>
 </div>
 <style>
