@@ -25,9 +25,14 @@ export class TeamComponent {
       role: 'LOGISTICS',
     },
     {
-      photo: '../../../assets/team/profile.png',
+      photo: '../../../assets/team/profile.jpg',
       name: 'Aravinth Msk',
       role: 'TECHNOLOGY',
+    },
+    {
+      photo: '../../../assets/team/profile.jpg',
+      name: 'Ashwanth',
+      role: 'GREEN ENERGY',
     },
     {
       photo: '../../../assets/team/bharath_vp.png',
@@ -58,6 +63,11 @@ export class TeamComponent {
       photo: '../../../assets/team/kamaal.png',
       name: 'Mohammed Kamaal',
       role: 'LAND CONVERSION',
+    },
+    {
+      photo: '../../../assets/team/profile.jpg',
+      name: 'V Ramprasanna',
+      role: 'BUSINESS DEVELOPMENT',
     },
   ]);
 }

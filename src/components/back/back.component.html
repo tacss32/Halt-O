@@ -1,0 +1,8 @@
+<div class="fixed bottom-4 right-4 z-50" (click)="scrollToTop()">
+  <div
+    [ngClass]="{ visible: isVisible, hidden: !isVisible }"
+    class="transition-opacity ease-out duration-150"
+  >
+    <img src="../../assets/up.png" alt="reach top" class="size-12 sm:size-14" />
+  </div>
+</div>
