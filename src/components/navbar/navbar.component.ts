@@ -29,6 +29,7 @@ export class NavbarComponent implements OnDestroy {
     { name: 'About', path: '/about' },
     { name: 'Application', path: '/application' },
     { name: 'Parking-Ecosystem', path: '/parking' },
+    { name: 'Blogs', path: '/blogs' },
     { name: 'Contact', path: '/contact' },
   ]);
 

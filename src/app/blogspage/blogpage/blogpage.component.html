@@ -1,0 +1,37 @@
+<div class="flex flex-col items-center">
+  <app-navbar />
+  <img
+    [src]="blog()?.photo"
+    alt="blog_img"
+    class="w-screen mt-[50px] sm:mt-0 mb-10"
+  />
+  <div class="flex flex-col gap-12 p-3 sm:w-4/5">
+    <h2 class="text-2xl sm:text-4xl font-bold text-center text-primary">
+      {{ blog()?.header }}
+    </h2>
+    <div class="flex flex-col gap-3 sm:text-lg">
+      <div class="flex">
+        <p>{{ blog()?.date }}</p>
+        <p class="ml-auto boder-2 bg-primary text-white rounded-lg px-2">
+          {{ blog()?.topic }}
+        </p>
+      </div>
+      <div class="flex gap-3">
+        @for (tag of blog()?.tags;track $index){
+        <p class="border border-primary rounded-lg px-2">{{ tag }}</p>
+        }
+      </div>
+    </div>
+    @for(context of blog()?.points; track $index){
+    <div class="flex flex-col gap-5">
+      <h4
+        class="text-lg sm:text-2xl font-semibold underline decoration-primary"
+      >
+        {{ context.title }}
+      </h4>
+      <p class="sm:text-lg">{{ context.content }}</p>
+    </div>
+    }
+  </div>
+  <app-footer />
+</div>

@@ -1,0 +1,20 @@
+<a [href]="'blogs/' + blog().id" class="flex flex-col gap-3 m-1 p-3">
+  <img [src]="blog().photo" alt="blog_img" class="w-full rounded-lg" />
+  <h4 class="text-xl font-semibold underline decoration-primary">
+    {{ blog().header }}
+  </h4>
+  <p class="line-clamp-3">
+    {{ blog().points[0].content }}
+  </p>
+  <div class="flex gap-3">
+    @for (tag of blog().tags;track $index){
+    <p class="border border-primary rounded-lg px-2">{{ tag }}</p>
+    }
+  </div>
+  <div class="flex">
+    <p>{{ blog().date }}</p>
+    <p class="ml-auto boder-2 bg-primary text-white rounded-lg px-2">
+      {{ blog().topic }}
+    </p>
+  </div>
+</a>
