@@ -1,6 +1,7 @@
 interface Blog {
   id: string;
   photo: string;
+  figure: string;
   date: string;
   topic: string;
   tags: string[];
@@ -10,7 +11,8 @@ interface Blog {
 export const Blogs: Blog[] = [
   {
     id: '001',
-    photo: '../../../assets/blog/blog1.jpg',
+    figure: '../../../assets/blog/blog1.jpg',
+    photo: '../../../assets/blog/2.jpg',
     date: '1st-Aug-2024',
     topic: 'Parking',
     tags: ['Trending', 'Nearby'],
@@ -70,7 +72,8 @@ export const Blogs: Blog[] = [
   },
   {
     id: '002',
-    photo: '../../../assets/blog/blog1.jpg',
+    figure: '../../../assets/blog/blog2.jpg',
+    photo: '../../../assets/blog/3.jpg',
     date: '1st-Aug-2024',
     topic: 'Parking',
     tags: ['Value', 'Safety'],
@@ -130,7 +133,8 @@ export const Blogs: Blog[] = [
   },
   {
     id: '003',
-    photo: '../../../assets/blog/blog1.jpg',
+    figure: '../../../assets/blog/blog1.jpg',
+    photo: '../../../assets/blog/4.gif',
     date: '1st-Aug-2024',
     topic: 'Parking',
     tags: ['Sales', 'Nearby'],
@@ -170,7 +174,8 @@ export const Blogs: Blog[] = [
   },
   {
     id: '004',
-    photo: '../../../assets/blog/blog1.jpg',
+    figure: '../../../assets/blog/blog1.jpg',
+    photo: '../../../assets/blog/1.jpg',
     date: '1st-Aug-2024',
     topic: 'Parking',
     tags: ['Subscribtion'],
