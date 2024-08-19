@@ -59,30 +59,37 @@
       ></iframe>
     </div>
     <form
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
       class="flex flex-col items-center justify-center p-3 rounded-xl gap-5 w-full sm:w-3/5 h-[350px] sm:h-[450px] shadow-lg"
     >
       <input
+        formControlName="name"
         type="text"
-        placeholder="FirstName*"
+        placeholder="Name*"
         class="border-b-2 p-1 border-primary w-full focus:outline-none"
       />
       <input
+        formControlName="place"
         type="text"
-        placeholder="LastName*"
+        placeholder="Place*"
         class="border-b-2 p-1 border-primary w-full focus:outline-none"
       />
 
       <input
+        formControlName="email"
         type="email"
         placeholder="Mail*"
         class="border-b-2 p-1 border-primary w-full focus:outline-none"
       />
       <textarea
+        formControlName="message"
         rows="4"
         class="border-b-2 border-primary w-full focus:outline-none"
         placeholder="Message*"
       ></textarea>
       <button
+        type="submit"
         class="border-2 bg-primary border-primary rounded-md transition-colors duration-200 ease-out hover:text-primary hover:bg-white font-semibold px-5 text-white"
       >
         Send
