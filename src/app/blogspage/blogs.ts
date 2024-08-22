@@ -178,7 +178,7 @@ export const Blogs: Blog[] = [
     photo: '../../../assets/blog/1.jpg',
     date: '1st-Aug-2024',
     topic: 'Parking',
-    tags: ['Subscribtion'],
+    tags: ['subscription'],
     header: 'Monthly paid car parking in Chennai',
     points: [
       {
