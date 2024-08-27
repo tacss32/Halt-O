@@ -7,7 +7,7 @@ import {
   Renderer2,
   OnDestroy,
 } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { NgClass } from '@angular/common';
 
 interface Menu {
@@ -18,7 +18,7 @@ interface Menu {
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, RouterModule],
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent implements OnDestroy {

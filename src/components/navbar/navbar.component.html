@@ -9,7 +9,7 @@
       'bg-white text-black': !isScroll()
     }"
   >
-    <a href="/" class="flex items-center gap-2">
+    <a routerLink="/" class="flex items-center gap-2">
       <img
         src="../../assets/logo.png"
         alt="halt-o logo"
@@ -22,7 +22,7 @@
       @for(page of pages();track page.path){
       <li>
         <a
-          [href]="page.path"
+          [routerLink]="page.path"
           class="hover:text-primary"
           [ngClass]="{
             'text-primary': isActive(page.path)
@@ -33,7 +33,7 @@
       }
     </ul>
     <div class="flex gap-3">
-      <a href="https://www.halt-o.com/" target="_blank">
+      <a routerLink="https://www.halt-o.com/" target="_blank">
         <button
           class="flex bg-primary px-2 sm:px-4 sm:py-1 rounded-full text-white font-semibold items-center"
         >
@@ -84,7 +84,7 @@
     <ul class="p-2 text-center w-full z-20">
       @for(page of pages();track page.path){
       <a
-        [href]="page.path"
+        [routerLink]="page.path"
         class="hover:text-primary"
         [ngClass]="{
           'text-primary': isActive(page.path)

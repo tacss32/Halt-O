@@ -1,4 +1,4 @@
-<a [href]="'blogs/' + blog().id" class="flex flex-col gap-3 m-1 p-3">
+<a [routerLink]="[blog().id]" class="flex flex-col gap-3 m-1 p-3">
   <img [src]="blog().photo" alt="blog_img" class="w-full rounded-lg" />
   <h4 class="text-xl font-semibold underline decoration-primary">
     {{ blog().header }}

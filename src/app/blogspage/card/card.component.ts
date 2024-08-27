@@ -1,4 +1,5 @@
 import { Component, input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 interface Blog {
   id: string;
@@ -13,7 +14,7 @@ interface Blog {
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './card.component.html',
 })
 export class CardComponent {
