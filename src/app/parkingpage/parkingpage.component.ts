@@ -19,4 +19,8 @@ import { BackComponent } from '../../components/back/back.component';
     BackComponent,
   ],
 })
-export class ParkingpageComponent {}
+export class ParkingpageComponent {
+  ngOnInit(): void {
+    window.scroll(0, 0);
+  }
+}

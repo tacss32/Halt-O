@@ -1,12 +1,11 @@
 <div
-  class="flex flex-col fixed sm:mt-4 w-full sm:w-4/5 z-20 duration-500 ease-in-out transition-transform translate-x-[-50%]"
-  [ngClass]="{ 'translate-y-[-100%] sm:translate-y-[-150%]': !navbarVisible() }"
+  class="flex flex-col fixed md:mt-4 w-full md:w-11/12 lg:4/5 z-20 duration-500 ease-in-out transition-transform translate-x-[-50%]"
+  [ngClass]="{ 'translate-y-[-100%] md:translate-y-[-150%]': !navbarVisible() }"
 >
   <div
-    class="flex items-center justify-between rounded-none sm:rounded-full px-4 py-3 sm:py-2 shadow-xl"
+    class="flex items-center justify-between rounded-none md:rounded-full px-4 py-3 md:py-2 shadow-xl bg-white text-black"
     [ngClass]="{
-      'sm:bg-black sm:bg-opacity-60 sm:text-white': isScroll(),
-      'bg-white text-black': !isScroll()
+      'md:bg-black md:bg-opacity-60 md:text-white': isScroll()
     }"
   >
     <a routerLink="/" class="flex items-center gap-2">
@@ -18,28 +17,34 @@
       <h2 class="text-xl sm:text-2xl font-bold text-primary">HALT-O</h2>
     </a>
 
-    <ul class="gap-8 font-medium hidden sm:flex">
+    <ul class="gap-3 lg:gap-8 font-medium text-base lg:text-lg hidden md:flex">
       @for(page of pages();track page.path){
-      <li>
+      <li class="relative">
+        <div
+          [ngClass]="{
+            'bg-primary absolute w-5 h-4 rounded-tl-lg rounded-br-lg opacity-45 -translate-x-2 translate-y-1':
+              isActive(page.path)
+          }"
+        ></div>
         <a
           [routerLink]="page.path"
-          class="hover:text-primary"
+          class="hover:text-primary z-10"
           [ngClass]="{
-            'text-primary': isActive(page.path)
+            'text-primary font-bold': isActive(page.path)
           }"
           >{{ page.name }}</a
         >
       </li>
       }
     </ul>
-    <div class="flex gap-3">
+    <div class="flex items-center gap-3">
       <a routerLink="https://www.halt-o.com/" target="_blank">
         <button
           class="flex bg-primary px-2 sm:px-4 sm:py-1 rounded-full text-white font-semibold items-center"
         >
           Login
           <svg
-            class="size-4 sm:size-6"
+            class="size-4 sm:size-5"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +62,7 @@
       <svg
         (click)="toggleMenu()"
         xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-menu-2 size-6 sm:size-12 flex sm:hidden"
+        class="icon icon-tabler icon-tabler-menu-2 size-6 sm:size-8 flex md:hidden"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="#000000"
@@ -73,7 +78,7 @@
     </div>
   </div>
   <div
-    class="flex flex-col relative items-center sm:hidden mt-2 rounded-md shadow-md bg-white text-black menu-container"
+    class="flex flex-col relative items-center md:hidden mt-2 rounded-md shadow-md bg-white text-black menu-container"
     [ngClass]="{ open: menuOpen() }"
   >
     <img
@@ -90,7 +95,7 @@
           'text-primary': isActive(page.path)
         }"
       >
-        <li class="p-1 border-b-2">
+        <li class="p-2 border-b-2">
           {{ page.name }}
         </li>
       </a>

@@ -13,6 +13,9 @@ import { BlogsService } from '../blogs.service';
 export class BlogpageComponent {
   blogId = input.required<string>();
 
+  ngOnInit(): void {
+    window.scroll(0, 0);
+  }
   private blogsService = inject(BlogsService);
   blog = computed(() =>
     this.blogsService.blogs.find((blog) => blog.id == this.blogId())
