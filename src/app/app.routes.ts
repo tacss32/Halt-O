@@ -7,6 +7,7 @@ import { ApplicationpageComponent } from './applicationpage/applicationpage.comp
 import { ContactpageComponent } from './contactpage/contactpage.component';
 import { BlogspageComponent } from './blogspage/blogspage.component';
 import { BlogpageComponent } from './blogspage/blogpage/blogpage.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   {
@@ -37,5 +38,9 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactpageComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
 ];
