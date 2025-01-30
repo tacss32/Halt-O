@@ -1,0 +1,16 @@
+<div
+  class="flex flex-col items-center gap-5 sm:gap-12 mb-10 sm:mb-24 w-screen overflow-hidden"
+>
+  <h3 class="text-3xl sm:text-6xl underline decoration-primary font-bold">
+    Clientele Prospect
+  </h3>
+  <div class="overflow-hidden whitespace-nowrap bg-white py-6">
+    <div class="flex items-center w-max animate-scrollLeft space-x-12">
+      @for (src of duplicatedLogos; track $index) {
+      <div class="flex-shrink-0">
+        <img [src]="src" alt="Client {{ $index + 1 }}" class="h-20 sm:h-24" />
+      </div>
+      }
+    </div>
+  </div>
+</div>
