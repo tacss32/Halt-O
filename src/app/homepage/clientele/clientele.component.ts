@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-clientele',
   standalone: true,
   imports: [],
-  templateUrl: './clientele.component.html'
+  templateUrl: './clientele.component.html',
 })
 export class ClienteleComponent {
   logos = [
@@ -16,10 +16,13 @@ export class ClienteleComponent {
     '../../../assets/clientele/hyundai.png',
     '../../../assets/clientele/upavihar.jpg',
     '../../../assets/clientele/v3.jpg',
-    '../../../assets/clientele/cumta.png',
     '../../../assets/clientele/kyn.jpg',
   ];
 
-  // Duplicate logos for infinite scrolling effect
-  duplicatedLogos = [...this.logos, ...this.logos, ...this.logos];
+  duplicatedLogos = [
+    ...this.logos,
+    ...this.logos,
+    ...this.logos,
+    ...this.logos,
+  ];
 }

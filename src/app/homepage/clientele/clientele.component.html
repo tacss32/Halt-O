@@ -8,7 +8,11 @@
     <div class="flex items-center w-max animate-scrollLeft space-x-12">
       @for (src of duplicatedLogos; track $index) {
       <div class="flex-shrink-0">
-        <img [src]="src" alt="Client {{ $index + 1 }}" class="h-20 sm:h-24" />
+        <img
+          [src]="src"
+          alt="Client {{ $index + 1 }}"
+          class="h-16 sm:h-20 lg:h-24"
+        />
       </div>
       }
     </div>
