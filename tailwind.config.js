@@ -15,17 +15,23 @@ module.exports = {
           "0%": { transform: "translateY(0)", opacity: "1" },
           "100%": { transform: "translateY(-100%)", opacity: "0" },
         },
+        scrollLeft: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-30%)" },
+        }
       },
+
       animation: {
         slideDown: "slideDown 0.3s ease-out forwards",
         slideUp: "slideUp 0.3s ease-out forwards",
+        scrollLeft: "scrollLeft 15s linear infinite",
+        scrollRight: "scrollRight 20s linear infinite",
       },
 
       colors: {
         primary: "#ffae00",
         secondary: "#f6f6f6",
       },
-      backgroundImage: {},
     },
   },
 };

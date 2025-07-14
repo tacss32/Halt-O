@@ -12,6 +12,9 @@ import { BlogsService } from './blogs.service';
   templateUrl: './blogspage.component.html',
 })
 export class BlogspageComponent {
+  ngOnInit(): void {
+    window.scroll(0, 0);
+  }
   private blogsService = inject(BlogsService);
   blogs = this.blogsService.blogs;
 }

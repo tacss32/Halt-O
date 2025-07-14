@@ -7,6 +7,7 @@ import { TruckComponent } from './truck/truck.component';
 import { AppComponent } from './app/app.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { BackComponent } from '../../components/back/back.component';
+import { ClienteleComponent } from './clientele/clientele.component';
 
 @Component({
   selector: 'app-homepage',
@@ -20,6 +21,11 @@ import { BackComponent } from '../../components/back/back.component';
     AppComponent,
     FooterComponent,
     BackComponent,
+    ClienteleComponent,
   ],
 })
-export class HomepageComponent {}
+export class HomepageComponent {
+  ngOnInit(): void {
+    window.scroll(0, 0);
+  }
+}

@@ -20,4 +20,8 @@ import { BackComponent } from '../../components/back/back.component';
     BackComponent,
   ],
 })
-export class ApplicationpageComponent {}
+export class ApplicationpageComponent {
+  ngOnInit(): void {
+    window.scroll(0, 0);
+  }
+}
