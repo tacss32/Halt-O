@@ -2,10 +2,9 @@ import { NgClass } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-back',
-  templateUrl: './back.component.html',
-  standalone: true,
-  imports: [NgClass],
+    selector: 'app-back',
+    templateUrl: './back.component.html',
+    imports: [NgClass]
 })
 export class BackComponent {
   isVisible: boolean = false;

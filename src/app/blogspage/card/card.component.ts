@@ -12,10 +12,9 @@ interface Blog {
 }
 
 @Component({
-  selector: 'app-card',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './card.component.html',
+    selector: 'app-card',
+    imports: [RouterModule],
+    templateUrl: './card.component.html'
 })
 export class CardComponent {
   blog = input.required<Blog>();

@@ -7,10 +7,9 @@ import {
 } from '@angular/forms';
 
 @Component({
-  selector: 'app-questions',
-  standalone: true,
-  templateUrl: './questions.component.html',
-  imports: [ReactiveFormsModule],
+    selector: 'app-questions',
+    templateUrl: './questions.component.html',
+    imports: [ReactiveFormsModule]
 })
 export class QuestionsComponent {
   contactForm: FormGroup;

@@ -16,10 +16,9 @@ interface Menu {
 }
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [NgClass, RouterModule],
-  templateUrl: './navbar.component.html',
+    selector: 'app-navbar',
+    imports: [NgClass, RouterModule],
+    templateUrl: './navbar.component.html'
 })
 export class NavbarComponent implements OnDestroy {
   menuOpen = signal<boolean>(false);

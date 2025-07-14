@@ -8,17 +8,16 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { BackComponent } from '../../components/back/back.component';
 
 @Component({
-  selector: 'app-applicationpage',
-  standalone: true,
-  templateUrl: './applicationpage.component.html',
-  imports: [
-    NavbarComponent,
-    HeaderComponent,
-    PassageComponent,
-    FeaturesComponent,
-    FooterComponent,
-    BackComponent,
-  ],
+    selector: 'app-applicationpage',
+    templateUrl: './applicationpage.component.html',
+    imports: [
+        NavbarComponent,
+        HeaderComponent,
+        PassageComponent,
+        FeaturesComponent,
+        FooterComponent,
+        BackComponent,
+    ]
 })
 export class ApplicationpageComponent {
   ngOnInit(): void {

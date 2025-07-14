@@ -6,10 +6,9 @@ import { CardComponent } from './card/card.component';
 import { BlogsService } from './blogs.service';
 
 @Component({
-  selector: 'app-blogspage',
-  standalone: true,
-  imports: [FooterComponent, NavbarComponent, CardComponent],
-  templateUrl: './blogspage.component.html',
+    selector: 'app-blogspage',
+    imports: [FooterComponent, NavbarComponent, CardComponent],
+    templateUrl: './blogspage.component.html'
 })
 export class BlogspageComponent {
   ngOnInit(): void {

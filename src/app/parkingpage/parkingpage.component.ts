@@ -7,17 +7,16 @@ import { RecycleComponent } from './recycle/recycle.component';
 import { BackComponent } from '../../components/back/back.component';
 
 @Component({
-  selector: 'app-parkingpage',
-  standalone: true,
-  templateUrl: './parkingpage.component.html',
-  imports: [
-    NavbarComponent,
-    HeaderComponent,
-    EcosystemComponent,
-    FooterComponent,
-    RecycleComponent,
-    BackComponent,
-  ],
+    selector: 'app-parkingpage',
+    templateUrl: './parkingpage.component.html',
+    imports: [
+        NavbarComponent,
+        HeaderComponent,
+        EcosystemComponent,
+        FooterComponent,
+        RecycleComponent,
+        BackComponent,
+    ]
 })
 export class ParkingpageComponent {
   ngOnInit(): void {

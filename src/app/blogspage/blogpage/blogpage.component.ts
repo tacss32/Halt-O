@@ -5,10 +5,9 @@ import { FooterComponent } from '../../../components/footer/footer.component';
 import { BlogsService } from '../blogs.service';
 
 @Component({
-  selector: 'app-blogpage',
-  standalone: true,
-  imports: [NavbarComponent, FooterComponent],
-  templateUrl: './blogpage.component.html',
+    selector: 'app-blogpage',
+    imports: [NavbarComponent, FooterComponent],
+    templateUrl: './blogpage.component.html'
 })
 export class BlogpageComponent {
   blogId = input.required<string>();

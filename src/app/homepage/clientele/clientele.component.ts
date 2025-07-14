@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-clientele',
-  standalone: true,
-  imports: [],
-  templateUrl: './clientele.component.html',
+    selector: 'app-clientele',
+    imports: [],
+    templateUrl: './clientele.component.html'
 })
 export class ClienteleComponent {
   logos = [

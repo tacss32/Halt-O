@@ -6,16 +6,15 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { BackComponent } from '../../components/back/back.component';
 
 @Component({
-  selector: 'app-contactpage',
-  standalone: true,
-  templateUrl: './contactpage.component.html',
-  imports: [
-    NavbarComponent,
-    HeaderComponent,
-    QuestionsComponent,
-    FooterComponent,
-    BackComponent,
-  ],
+    selector: 'app-contactpage',
+    templateUrl: './contactpage.component.html',
+    imports: [
+        NavbarComponent,
+        HeaderComponent,
+        QuestionsComponent,
+        FooterComponent,
+        BackComponent,
+    ]
 })
 export class ContactpageComponent {
   ngOnInit(): void {

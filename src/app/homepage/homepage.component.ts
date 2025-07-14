@@ -10,19 +10,18 @@ import { BackComponent } from '../../components/back/back.component';
 import { ClienteleComponent } from './clientele/clientele.component';
 
 @Component({
-  selector: 'app-homepage',
-  standalone: true,
-  templateUrl: './homepage.component.html',
-  imports: [
-    NavbarComponent,
-    HeaderComponent,
-    SlidersComponent,
-    TruckComponent,
-    AppComponent,
-    FooterComponent,
-    BackComponent,
-    ClienteleComponent,
-  ],
+    selector: 'app-homepage',
+    templateUrl: './homepage.component.html',
+    imports: [
+        NavbarComponent,
+        HeaderComponent,
+        SlidersComponent,
+        TruckComponent,
+        AppComponent,
+        FooterComponent,
+        BackComponent,
+        ClienteleComponent,
+    ]
 })
 export class HomepageComponent {
   ngOnInit(): void {

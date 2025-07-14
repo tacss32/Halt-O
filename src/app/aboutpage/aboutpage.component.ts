@@ -9,18 +9,17 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { BackComponent } from '../../components/back/back.component';
 
 @Component({
-  selector: 'app-aboutpage',
-  standalone: true,
-  templateUrl: './aboutpage.component.html',
-  imports: [
-    NavbarComponent,
-    HeaderComponent,
-    AboutusComponent,
-    MissionVissionComponent,
-    TeamComponent,
-    FooterComponent,
-    BackComponent,
-  ],
+    selector: 'app-aboutpage',
+    templateUrl: './aboutpage.component.html',
+    imports: [
+        NavbarComponent,
+        HeaderComponent,
+        AboutusComponent,
+        MissionVissionComponent,
+        TeamComponent,
+        FooterComponent,
+        BackComponent,
+    ]
 })
 export class AboutpageComponent {
   ngOnInit(): void {
