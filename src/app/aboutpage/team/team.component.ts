@@ -7,19 +7,19 @@ interface TeamMember {
 }
 
 @Component({
-    selector: 'app-team',
-    imports: [],
-    templateUrl: './team.component.html'
+  selector: 'app-team',
+  imports: [],
+  templateUrl: './team.component.html',
 })
 export class TeamComponent {
   members = signal<TeamMember[]>([
     {
-      photo: '../../../assets/team/aathav_cha.png',
+      photo: '../../../assets/team/aathav_cha.jpg',
       name: 'Aathav Chander',
       role: 'SALES',
     },
     {
-      photo: '../../../assets/team/aravind_rj.png',
+      photo: '../../../assets/team/aravind_rj.jpg',
       name: 'Aravind Jawahar',
       role: 'LOGISTICS',
     },
@@ -34,32 +34,32 @@ export class TeamComponent {
       role: 'GREEN ENERGY',
     },
     {
-      photo: '../../../assets/team/bharath_vp.png',
+      photo: '../../../assets/team/bharath_vp.jpg',
       name: 'Bharath',
       role: 'PROCUREMENT',
     },
     {
-      photo: '../../../assets/team/jagadeesh.png',
+      photo: '../../../assets/team/jagadeesh.jpg',
       name: 'Jagadeesh',
       role: 'VENDOR MANAGEMENT',
     },
     {
-      photo: '../../../assets/team/jaishankar.png',
+      photo: '../../../assets/team/jaishankar.jpg',
       name: 'Jai Shankar',
       role: 'SUPPLY CHAIN MANAGEMENT',
     },
     {
-      photo: '../../../assets/team/kalai.png',
+      photo: '../../../assets/team/kalai.jpg',
       name: 'Kalai Raj',
       role: 'HR & OPERATIONS',
     },
     {
-      photo: '../../../assets/team/manikandan.png',
+      photo: '../../../assets/team/manikandan.jpg',
       name: 'ManiKandan',
       role: 'LEGAL COMPLIANCE',
     },
     {
-      photo: '../../../assets/team/kamaal.png',
+      photo: '../../../assets/team/kamaal.jpg',
       name: 'Mohammed Kamaal',
       role: 'LAND CONVERSION',
     },
@@ -67,6 +67,16 @@ export class TeamComponent {
       photo: '../../../assets/team/profile.jpg',
       name: 'V Ramprasanna',
       role: 'BUSINESS DEVELOPMENT',
+    },
+    {
+      photo: '../../../assets/team/jayshankaranK.jpg',
+      name: 'Jayshankaran K',
+      role: 'BUSINESS DEVELOPMENT',
+    },
+    {
+      photo: '../../../assets/team/ganeshpandian.jpg',
+      name: 'Ganesh Pandian',
+      role: 'Business to Government B2G',
     },
   ]);
 }

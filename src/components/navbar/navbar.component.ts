@@ -16,9 +16,9 @@ interface Menu {
 }
 
 @Component({
-    selector: 'app-navbar',
-    imports: [NgClass, RouterModule],
-    templateUrl: './navbar.component.html'
+  selector: 'app-navbar',
+  imports: [NgClass, RouterModule],
+  templateUrl: './navbar.component.html',
 })
 export class NavbarComponent implements OnDestroy {
   menuOpen = signal<boolean>(false);
@@ -77,6 +77,6 @@ export class NavbarComponent implements OnDestroy {
   }
 
   ngOnDestroy() {
-    this.clickListener(); // Remove the event listener when the component is destroyed
+    this.clickListener();
   }
 }
