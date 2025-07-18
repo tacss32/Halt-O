@@ -22,7 +22,7 @@
       <li class="relative">
         <div
           [ngClass]="{
-            'bg-primary absolute w-5 h-4 rounded-tl-lg rounded-br-lg opacity-45 -translate-x-2 translate-y-1':
+            'bg-primary absolute w-5 h-4 animate-ping duration-300 ease-in-out rounded-tl-lg rounded-br-lg opacity-45 -translate-x-2 translate-y-1':
               isActive(page.path)
           }"
         ></div>
@@ -40,7 +40,7 @@
     <div class="flex items-center gap-3">
       <a routerLink="/login" target="_blank">
         <button
-          class="flex bg-primary px-2 sm:px-4 sm:py-1 rounded-full text-white font-semibold items-center"
+          class="flex bg-primary px-2 py-1 sm:px-4 sm:py-2 rounded-full text-white font-semibold items-center"
         >
           Login
           <svg
@@ -88,17 +88,23 @@
     />
     <ul class="p-2 text-center w-full z-20">
       @for(page of pages();track page.path){
-      <a
-        [routerLink]="page.path"
-        class="hover:text-primary"
-        [ngClass]="{
-          'text-primary': isActive(page.path)
-        }"
-      >
-        <li class="p-2 border-b-2">
+      <li class="p-2 border-b-2 flex pl-[20%]">
+        <div
+          [ngClass]="{
+            'bg-primary absolute w-5 h-4 animate-ping duration-300 ease-in-out rounded-tl-lg rounded-br-lg opacity-45 -translate-x-2 translate-y-1':
+              isActive(page.path)
+          }"
+        ></div>
+        <a
+          [routerLink]="page.path"
+          class="hover:text-primary"
+          [ngClass]="{
+            'text-primary': isActive(page.path)
+          }"
+        >
           {{ page.name }}
-        </li>
-      </a>
+        </a>
+      </li>
       }
     </ul>
   </div>

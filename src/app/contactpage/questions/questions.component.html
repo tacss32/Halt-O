@@ -61,7 +61,7 @@
     <form
       [formGroup]="contactForm"
       (ngSubmit)="onSubmit()"
-      class="flex flex-col items-center justify-center p-3 rounded-xl gap-5 w-full sm:w-3/5 h-[350px] sm:h-[450px] shadow-lg"
+      class="flex flex-col items-center justify-center p-3 rounded-xl gap-5 w-full sm:w-3/5 h-[350px] sm:h-[440px] shadow-xl"
     >
       <input
         formControlName="name"
@@ -90,7 +90,7 @@
       ></textarea>
       <button
         type="submit"
-        class="border-2 bg-primary border-primary rounded-md transition-colors duration-200 ease-out hover:text-primary hover:bg-white font-semibold px-5 text-white"
+        class="border-2 bg-primary border-primary rounded-md transition-colors duration-200 ease-out hover:text-primary hover:bg-white font-semibold px-5 py-1 text-white"
       >
         Send
       </button>

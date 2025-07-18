@@ -1,4 +1,7 @@
-<a [routerLink]="[blog().id]" class="flex flex-col gap-3 m-1 p-3">
+<a
+  [routerLink]="[blog().id]"
+  class="flex flex-col gap-3 m-1 p-3 hover:border border-primary hover:shadow-lg transition-all duration-150 ease-in-out rounded-lg"
+>
   <img [src]="blog().photo" alt="blog_img" class="w-full rounded-lg" />
   <h4 class="text-xl font-semibold underline decoration-primary">
     {{ blog().header }}

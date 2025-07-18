@@ -39,6 +39,11 @@ export class TeamComponent {
       role: 'PROCUREMENT',
     },
     {
+      photo: '../../../assets/team/ganeshpandian.jpg',
+      name: 'Ganesh Pandian',
+      role: 'Business to Government B2G',
+    },
+    {
       photo: '../../../assets/team/jagadeesh.jpg',
       name: 'Jagadeesh',
       role: 'VENDOR MANAGEMENT',
@@ -47,6 +52,11 @@ export class TeamComponent {
       photo: '../../../assets/team/jaishankar.jpg',
       name: 'Jai Shankar',
       role: 'SUPPLY CHAIN MANAGEMENT',
+    },
+    {
+      photo: '../../../assets/team/jayshankaranK.jpg',
+      name: 'Jayshankaran K',
+      role: 'Head Transformation',
     },
     {
       photo: '../../../assets/team/kalai.jpg',
@@ -65,18 +75,8 @@ export class TeamComponent {
     },
     {
       photo: '../../../assets/team/profile.jpg',
-      name: 'V Ramprasanna',
+      name: 'Ramprasanna V',
       role: 'BUSINESS DEVELOPMENT',
-    },
-    {
-      photo: '../../../assets/team/jayshankaranK.jpg',
-      name: 'Jayshankaran K',
-      role: 'BUSINESS DEVELOPMENT',
-    },
-    {
-      photo: '../../../assets/team/ganeshpandian.jpg',
-      name: 'Ganesh Pandian',
-      role: 'Business to Government B2G',
     },
   ]);
 }
