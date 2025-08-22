@@ -49,13 +49,8 @@ export class TeamComponent {
       role: 'VENDOR MANAGEMENT',
     },
     {
-      photo: '../../../assets/team/jaishankar.jpg',
-      name: 'Jai Shankar',
-      role: 'SUPPLY CHAIN MANAGEMENT',
-    },
-    {
       photo: '../../../assets/team/jayshankaranK.jpg',
-      name: 'Jayshankaran K',
+      name: 'Jayashankaran K',
       role: 'Head Transformation',
     },
     {
